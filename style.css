@@ -34,3 +34,21 @@ body {
     letter-spacing: 6px;
     line-height: .95em;
 }
+
+.dot-line{
+    content:"";
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    border-left: 4px dotted #091625;
+}
+
+.countdown{
+    font-family:'Poppins', sans-serif;
+    color: grey;
+    font-size: 14px;
+}
+
+.countdown-box{
+    background-color: #262f3e;
+}
