@@ -1,8 +1,11 @@
-const DaysToCountDown = ["March 31, 2024 22:30:00", "April 2, 2024 00:00:00"];
+const DaysToCountDown = ["March 31, 2024 22:54:00", "March 31, 2024 22:55:00"];
 
 // const countDownToDate = new Date("April 1, 2024 00:00:00").getTime();
 
 setInterval(function() {
+    if (DaysToCountDown.length === 0) {
+        document.getElementById("countdown").innerHTML = 'Expired';
+    }
     let now = new Date().getTime();
     let distance = new Date(DaysToCountDown[0]) - now;
     let days = addLeadingZero(Math.floor(distance / (1000 * 60 * 60 * 24)))
