@@ -1,4 +1,4 @@
-const countDownToDate = new Date("April 1, 2024 00:00:00").getTime();
+const countDownToDate = new Date("March 1, 2024 00:00:00").getTime();
 setInterval(function() {
     let now = new Date().getTime();
     let distance = countDownToDate - now;
@@ -10,4 +10,7 @@ setInterval(function() {
     document.getElementById("hours").innerHTML = hours;
     document.getElementById("minutes").innerHTML = minutes;
     document.getElementById("seconds").innerHTML = seconds;
+    if (distance < 0) {
+        document.getElementById("countdown").innerHTML = 'Expired';
+    }
 }, 1000);
